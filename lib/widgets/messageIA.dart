@@ -16,7 +16,7 @@ class MessageIA extends StatelessWidget {
       children: [
 
         Container(
-          margin: const EdgeInsets.only(top: 3),
+          margin: const EdgeInsets.only(bottom: 4),
           padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           constraints: BoxConstraints(maxWidth: size.width * 0.7),
           decoration: BoxDecoration(color: colors.primary, borderRadius: BorderRadius.circular(15)),
