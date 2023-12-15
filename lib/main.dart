@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       home: const ChatScreen(),
 
       // Theme App
-      theme: AppTheme(selectedColor: 5).applyTheme(),
+      theme: AppTheme(selectedColor: 3).applyTheme(),
       );
   }
 }
