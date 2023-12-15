@@ -29,13 +29,12 @@ class AppTheme {
 
 
   // 'applyTheme' es un método que retorna una instancia (ThemeData) del tema general que se aplicará a la app.
-  // esta instamcia se coloca en 'main.dart' dentro del widget 'MaterialApp' de la siguiente forma:
+  // esta instancia se coloca en 'main.dart' dentro del widget 'MaterialApp' de la siguiente forma:
 
   //                          theme: AppTheme(selectedColor: 0).applyTheme()
   ThemeData applyTheme() {
 
     return ThemeData(
-      useMaterial3: true,
       colorSchemeSeed: _colorThemes[selectedColor]
     );
   }
