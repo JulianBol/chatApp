@@ -1,3 +1,4 @@
+import 'package:chat_app_v1/widgets/input_message.dart';
 import 'package:chat_app_v1/widgets/messageIA.dart';
 import 'package:chat_app_v1/widgets/my_message.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,8 @@ class ChatScreen extends StatelessWidget {
   }
 }
 
+
+
 // '_chatView' contien toda la estrucutura del cuerpo de la app. En este widget
 // se define la organización en pantalla de los mensajes y la entrada de texto (input).
 class _ChatView extends StatelessWidget {
@@ -35,30 +38,28 @@ class _ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5.0),
+    
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+      
+        child: Column(
 
-      // PENDIENTE.
-      child: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return (index % 2 == 0)
-                  ? const MyMessage()
-                  : const MessageIA();
-              },
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return (index % 2 == 0)
+                    ? const MyMessage()
+                    : const MessageIA();
+                },
+              ),
             ),
-          ),
-
-          // TODO: Actualizar para poner un input de texto. Sera la caja de mensajes.
-          Container(
-            width: 100,
-            height: 40,
-            color: Colors.blueGrey,
-          ),
-        ],
+           
+            InputMessage()
+          ],
+        ),
       ),
     );
   }
