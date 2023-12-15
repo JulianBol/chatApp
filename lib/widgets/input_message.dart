@@ -43,7 +43,7 @@ class InputMessage extends StatelessWidget {
     );
 
     return Container(
-        // margin: const EdgeInsets.symmetric(vertical: 5),
+        margin: const EdgeInsets.only(bottom: 5),
         child: TextFormField(
             decoration: inputDecoration,
             controller: textController,
